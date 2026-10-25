@@ -1,4 +1,4 @@
-# DevShift — SDE-1 Interview Lab
+# DevShift | SDE-1 Interview Lab
 
 **A coding and interview practice command center for the transition from enterprise technical support to software engineering.**
 
