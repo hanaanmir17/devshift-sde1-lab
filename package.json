@@ -1,0 +1,12 @@
+{
+  "name": "devshift-sde1-lab",
+  "version": "1.0.2",
+  "private": true,
+  "type": "module",
+  "description": "Offline-first SDE-1 coding and interview practice workspace",
+  "scripts": {
+    "dev": "node dev-server.mjs",
+    "test": "node tests/verify.mjs"
+  },
+  "engines": { "node": ">=18" }
+}

@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#0a0c11" />
+  <meta name="description" content="DevShift is an offline-first SDE-1 training workspace with real JavaScript coding tests, mock interviews, a six-week roadmap and job application tracking." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://devshift-sde1-lab.vercel.app/" />
+  <link rel="canonical" href="https://devshift-sde1-lab.vercel.app/" />
+  <script src="/url-cleanup.js"></script>
+  <meta property="og:title" content="DevShift — From Debugging to Building" />
+  <meta property="og:description" content="Build the skills, confidence and interview stories to land your first software engineering role." />
+  <title>DevShift — Your SDE-1 Command Center</title>
+  <link rel="manifest" href="manifest.webmanifest" />
+  <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar" id="sidebar" aria-label="Main navigation">
+      <a class="brand" href="#dashboard" data-view="dashboard" aria-label="DevShift dashboard"><span class="brand-symbol"><svg viewBox="0 0 36 36" fill="none" aria-hidden="true"><path d="M5 23 16 6l-2 12h17L20 30l3-12H5Z" stroke="currentColor" stroke-width="2.8" stroke-linejoin="round"/></svg></span><span>dev<span class="brand-accent">shift</span><small>ENGINEERING STARTS HERE</small></span></a>
+      <div class="sidebar-label">YOUR WORKSPACE</div>
+      <nav class="nav-links" aria-label="Study sections">
+        <a class="nav-item active" href="#dashboard" data-view="dashboard" aria-current="page"><span class="nav-icon" data-icon="layout-dashboard"></span>Overview <span class="nav-key">01</span></a>
+        <a class="nav-item" href="#arena" data-view="arena"><span class="nav-icon" data-icon="code"></span>Code arena <span class="nav-key">02</span></a>
+        <a class="nav-item" href="#interview" data-view="interview"><span class="nav-icon" data-icon="mic"></span>Mock interviews <span class="nav-key">03</span></a>
+        <a class="nav-item" href="#roadmap" data-view="roadmap"><span class="nav-icon" data-icon="calendar"></span>6-week roadmap <span class="nav-key">04</span></a>
+        <a class="nav-item" href="#jobs" data-view="jobs"><span class="nav-icon" data-icon="briefcase"></span>Application tracker <span class="nav-key">05</span></a>
+      </nav>
+      <div class="sidebar-spacer"></div>
+      <div class="sidebar-mission"><div class="mission-top"><span class="green-dot"></span> YOUR CURRENT MISSION</div><strong>Support engineer <span>→</span> SDE-1</strong><p>Turn hands-on debugging into engineering confidence.</p><div class="mini-progress"><span id="side-progress" style="width:0%"></span></div><small id="side-progress-label">0 of 18 challenges cleared</small></div>
+      <div class="sidebar-bottom"><div class="avatar">HM</div><div><strong>Hanaan Mir</strong><span>Preparing for SDE-1</span></div><span class="sidebar-status" title="Your data is saved on this device"></span></div>
+    </aside>
+    <div class="mobile-backdrop" id="mobile-backdrop"></div>
+    <main class="main-area" id="main-area">
+      <header class="topbar"><div class="topbar-left"><button class="icon-button mobile-menu" id="menu-button" aria-label="Open navigation" aria-expanded="false"><span data-icon="menu"></span></button><span class="breadcrumb">WORKSPACE <span class="crumb-slash">/</span> <strong id="breadcrumb">Overview</strong></span></div><div class="topbar-right"><span class="system-pill"><span class="green-dot"></span> SYSTEM ONLINE <span class="system-sub">· PRIVATE TO YOUR BROWSER</span></span><button id="export-btn" class="top-action" title="Back up your progress as JSON"><span data-icon="download"></span><span>Export progress</span></button></div></header>
+      <div id="view-root" class="view-root" aria-live="polite"></div>
+      <footer class="app-footer"><span>DEVSHIFT / BUILD EVERY DAY</span><span>Progress is stored locally. No account or API key required.</span></footer>
+    </main>
+  </div>
+  <div class="toast-stack" id="toast-stack" role="status" aria-live="polite"></div>
+  <input type="file" id="import-file" accept="application/json,.json" hidden />
+  <script type="module" src="app.js"></script>
+</body>
+</html>
